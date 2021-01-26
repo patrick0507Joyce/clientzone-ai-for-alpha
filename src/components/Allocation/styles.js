@@ -28,5 +28,14 @@ export default makeStyles((theme) => ({
     justifyContent: 'space-between',
     width: '30rem',
   },
+  table: {
+    minWidth: 650,
+  },
+  upCube: {
+    color: 'green[500]',
+  },
+  downCube: {
+    color: 'red[700]',
+  }
 }));
 

@@ -10,10 +10,17 @@ import {
   Grid,
 } from "@material-ui/core";
 import { IoBarChartSharp } from "react-icons/io5";
+import { MdSyncProblem } from 'react-icons/md';
+import StopIcon from '@material-ui/icons/Stop';
 import allocationResultData from "../../data/total_allocation.json";
 import allocationWeightData from "../../data/strategies_weight.json";
 import { Line } from "react-chartjs-2";
 import moment from "moment";
+import { Table, TableHead, TableRow, TableBody } from "@material-ui/core";
+import ProbabilityHeatMap from '../../data/probabilities2.json'
+import { TableCell } from "@material-ui/core";
+import { green, red } from '@material-ui/core/colors';
+
 
 const Allocation = () => {
   const classes = usestyles();
@@ -220,6 +227,45 @@ const Allocation = () => {
             },
           }}
         />
+        <Avatar className={classes.avatar}>
+          <MdSyncProblem />
+        </Avatar>
+        <Typography variant="h5">Probability Heat Map Analysis</Typography>
+        <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <TableCell>
+                  Asset
+                </TableCell>
+                <TableCell>
+                  Current Allocation
+                </TableCell>
+                <TableCell>
+                  Market Risk
+                </TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {ProbabilityHeatMap.map((data, index) => (
+                <TableRow key={index}>
+                  <TableCell>{data.Asset}</TableCell>
+                  <TableCell>{data.Current_Allocation}</TableCell>
+                  <TableCell>
+                  {
+                    (Number(data.Current_Allocation) > 10 ?
+                    <StopIcon style={{ color: green[500] }}></StopIcon> :
+                    <div>
+                      <StopIcon style={{ color: red[700] }}></StopIcon>
+                      <StopIcon style={{ color: red[700] }}></StopIcon>
+                    </div>
+                    )
+                  }
+                  </TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+
+        </Table>
       </Paper>
     </Container>
   );
