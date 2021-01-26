@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="logo_inverted-2_old.svg"
+   id="svg5524"
+   version="1.1"
+   viewBox="0 0 69.333345 50"
+   height="100"
+   width="400">
+  <sodipodi:namedview
+     inkscape:object-paths="true"
+     inkscape:snap-global="false"
+     inkscape:current-layer="svg5524"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="9.962303"
+     inkscape:cx="91.224155"
+     inkscape:zoom="1.4103425"
+     showgrid="false"
+     id="namedview14"
+     inkscape:window-height="961"
+     inkscape:window-width="1280"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     inkscape:document-rotation="0" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <text
+     xml:space="preserve"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:11.9733px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill-opacity:1;stroke-width:0.255043;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke;fill:#4885d2;"
+     x="-15.051369"
+     y="32.230877"
+     id="text4586"
+     transform="scale(0.88752733,1.1267259)"><tspan
+       id="tspan4584"
+       x="-15.051369"
+       y="32.230877"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:28.1192px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill-opacity:1;stroke-width:0.255043;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke;fill:#4885d2;">For Alpha</tspan></text>
+  <path
+     id="rect3721-1"
+     d="m -62.917196,2.1462671 c -1.146811,0 -0.868476,0.3435 -0.87096,1.667774 l -0.07993,42.5971209 c -0.0024,1.324288 -0.195913,1.350716 0.95089,1.346451 l 43.197324,-0.160654 c 1.146802,-0.0043 0.867197,-0.90577 0.87096,-2.230055 l 0.119898,-42.1954819 c 0.0039,-1.324272 -0.004,-1.025154 -1.150714,-1.025154 z m 13.37485,10.9372179 h 7.200696 l 7.308927,23.101072 h -6.545678 l -4.36416,-12.78094 -0.02142,0.05883 z m 11.602062,0.289131 h 6.653906 l 1.745215,4.925383 h -6.763265 z m -12.462267,0.05511 3.579491,10.378964 -4.669686,12.83977 -6.435191,-0.234068 z m 21.733993,8.505186 4.800464,14.424404 -6.545675,-0.117662 -4.908696,-14.189079 z"
+     style="fill-opacity:1;stroke-width:0.215588;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke;fill:#4885d2"
+     sodipodi:nodetypes="ssssssssscccccccccccccccccccccc" />
+</svg>

@@ -1,0 +1,107 @@
+[
+  {
+    "Asset": "US S&P 500",
+    "Current Allocation": "11.17%",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "US Nasdaq 100",
+    "Current Allocation": "13.27%",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "EU Euro Stoxx 50",
+    "Current Allocation": "10.17%",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "UK FTSE 100",
+    "Current Allocation": "7.60%",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "Japan Nikkei 225",
+    "Current Allocation": "22.33%",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "MSCI EM USD",
+    "Current Allocation": "10.03%",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "Global Allocation",
+    "Current Allocation": "74.57%",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "",
+    "Current Allocation": "",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "",
+    "Current Allocation": "",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "",
+    "Current Allocation": "",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "",
+    "Current Allocation": "",
+    "Market Risk": "",
+    "": "",
+    "\r": "Bull Market\r"
+  },
+  {
+    "Asset": "",
+    "Current Allocation": "",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "",
+    "Current Allocation": "",
+    "Market Risk": "",
+    "": "",
+    "\r": "Neutral Market\r"
+  },
+  {
+    "Asset": "",
+    "Current Allocation": "",
+    "Market Risk": "",
+    "": "",
+    "\r": "\r"
+  },
+  {
+    "Asset": "",
+    "Current Allocation": "",
+    "Market Risk": "",
+    "": "",
+    "\r": "Bear Market\r\n"
+  }
+]
