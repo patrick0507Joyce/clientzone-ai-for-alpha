@@ -4,6 +4,7 @@ import MSCIEMUSD from "./MSCI EM USD.png";
 import UKFTSE100 from "./UK FTSE 100.png";
 import USNasdaq100 from "./US Nasdaq 100.png";
 import USSP500 from "./US S&P 500.png";
+import MarketRisk from "./market-risk.jpeg";
 
 export {
   EUEuroStoxx,
@@ -12,4 +13,5 @@ export {
   UKFTSE100,
   USNasdaq100,
   USSP500,
+  MarketRisk,
 };

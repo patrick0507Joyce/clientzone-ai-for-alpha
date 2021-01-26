@@ -17,9 +17,10 @@ import allocationWeightData from "../../data/strategies_weight.json";
 import { Line } from "react-chartjs-2";
 import moment from "moment";
 import { Table, TableHead, TableRow, TableBody } from "@material-ui/core";
-import ProbabilityHeatMap from '../../data/probabilities2.json'
+import ProbabilityHeatMap from '../../data/probabilities2.json';
 import { TableCell } from "@material-ui/core";
 import { green, red } from '@material-ui/core/colors';
+import { MarketRisk } from '../../images/Market'
 
 
 const Allocation = () => {
@@ -255,8 +256,8 @@ const Allocation = () => {
                     (Number(data.Current_Allocation) > 10 ?
                     <StopIcon style={{ color: green[500] }}></StopIcon> :
                     <div>
-                      <StopIcon style={{ color: red[700] }}></StopIcon>
-                      <StopIcon style={{ color: red[700] }}></StopIcon>
+                      <StopIcon style={{ color: red[500] }}></StopIcon>
+                      <StopIcon style={{ color: red[500] }}></StopIcon>
                     </div>
                     )
                   }
@@ -264,8 +265,12 @@ const Allocation = () => {
                 </TableRow>
               ))}
             </TableBody>
-
         </Table>
+        <Avatar className={classes.avatar}>
+          <MdSyncProblem />
+        </Avatar>
+        <Typography variant="h5">Probability Heat Map Analysis Version2</Typography>
+        <img src={MarketRisk} width="100%"/>
       </Paper>
     </Container>
   );
