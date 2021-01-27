@@ -43,7 +43,6 @@ const Navbar = () => {
             component={Link}
             to="/performance"
             className={classes.navItem}
-            color="secondary"
             variant="outlined"
           >
             Performance
@@ -52,7 +51,6 @@ const Navbar = () => {
             component={Link}
             to="/allocation"
             className={classes.navItem}
-            color="secondary"
             variant="outlined"
           >
             Allocation
@@ -61,7 +59,6 @@ const Navbar = () => {
             component={Link}
             to="/explain"
             className={classes.navItem}
-            color="secondary"
             variant="outlined"
           >
             Explicability

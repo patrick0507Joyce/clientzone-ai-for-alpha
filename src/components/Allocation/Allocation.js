@@ -86,10 +86,15 @@ const Allocation = () => {
   return (
     <Container component="main" maxWidth="lg">
       <Paper className={classes.paper} elevation={3}>
-        <Avatar className={classes.avatar}>
-          <IoBarChartSharp />
-        </Avatar>
-        <Typography variant="h5">Global Allocation</Typography>
+        <Typography variant="h5">Allocation</Typography>
+        <Grid container justify="center" alignItems="center">
+          <Grid item xs={7} align="center">
+            <Typography variant="h6">Historical Allocation</Typography>
+          </Grid>
+          <Grid item xs={5} align="center">
+            <Typography variant="h6">Current Market Analysis</Typography>
+          </Grid>
+        </Grid>
         <Grid container justify="flex-start" alignItems="center">
           <Grid item xs={false}>
             <Typography variant="h6">Duration: </Typography>
@@ -128,187 +133,117 @@ const Allocation = () => {
             </Toolbar>
           </Grid>
         </Grid>
-        <Line
-          data={{
-            labels: allocationDataset.map(({ Dates }) => {
-              const momentString = moment(Dates, "DD/MM/YYYY");
-              if (interval >= 30) {
-                return momentString.format("YYYY-MM");
-              } else {
-                return momentString.format("YYYY-MM-DD");
-              }
-            }),
-            datasets: [
-              {
-                data: allocationDataset.map((data) => data.Total_Allocation),
-                label: "Allocation Ratio",
-                borderColor: "#01579B",
-                backgroundColor: "rgb(129, 212, 250, 0.5)",
-                fill: true,
-              },
-              {
-                data: allocationWeightDataset.map((data) => data["US_S&P_500"]),
-                label: "US S&P 500",
-                borderColor: "#0B1D78",
-                backgroundColor: "transparent",
-                fill: false,
-                hidden: true,
-              },
-              {
-                data: allocationWeightDataset.map(
-                  (data) => data["US_Nasdaq_100"]
-                ),
-                label: "US Nasdaq 100",
-                borderColor: "#0045A5",
-                backgroundColor: "transparent",
-                fill: false,
-                hidden: true,
-              },
-              {
-                data: allocationWeightDataset.map(
-                  (data) => data["EU_Euro_Stoxx_50"]
-                ),
-                label: "EU Euro Stoxx 50",
-                borderColor: "#0069C0",
-                backgroundColor: "transparent",
-                fill: false,
-                hidden: true,
-              },
-              {
-                data: allocationWeightDataset.map(
-                  (data) => data["UK_FTSE_100"]
-                ),
-                label: "UK FTSE 100",
-                borderColor: "#008AC5",
-                backgroundColor: "transparent",
-                fill: false,
-                hidden: true,
-              },
-              {
-                data: allocationWeightDataset.map(
-                  (data) => data["Japan_Nikkei_225"]
-                ),
-                label: "Japan Nikkei 225",
-                borderColor: "#00A9B5",
-                backgroundColor: "transparent",
-                fill: false,
-                hidden: true,
-              },
-              {
-                data: allocationWeightDataset.map(
-                  (data) => data["MSCI_EM_USD"]
-                ),
-                label: "MSCI EM USD",
-                borderColor: "#1FE074",
-                backgroundColor: "transparent",
-                fill: false,
-                hidden: true,
-              },
-            ],
-          }}
-          options={{
-            title: {
-              display: false,
-              text: "Custom Chart Title",
-            },
-            tooltips: {
-              mode: "index",
-              intersect: false,
-            },
-            hover: {
-              mode: "nearest",
-              intersect: true,
-            },
-            legend: {
-              labels: {
-                fontSize: 12,
-                fontStyle: "bold",
-              },
-            },
-          }}
-        />
-        <Avatar className={classes.avatar}>
-          <MdSyncProblem />
-        </Avatar>
-        <Typography variant="h5">Probability Heat Map Analysis</Typography>
-        <Table className={classes.table}>
-          <TableHead align="center">
-            <TableRow>
-              <TableCell align="center">Asset</TableCell>
-              <TableCell align="center">Current Allocation</TableCell>
-              <TableCell align="center">Market Risk</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {ProbabilityHeatMap.map((data, index) => (
-              <TableRow key={index}>
-                <TableCell align="center">{data.Asset}</TableCell>
-                <TableCell align="center">{data.Current_Allocation + "%"}</TableCell>
-                <TableCell align="center">
-                  {Number(data.Current_Allocation) > 10 ? (
-                    <StopIcon style={{ color: green[500] }}></StopIcon>
-                  ) : (
-                    <div>
-                      <StopIcon style={{ color: green[500] }}></StopIcon>
-                    </div>
-                  )}
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-        <Table className={classes.tableLegend}>
-          <TableHead>
-            <TableRow>
-              <TableCell align="center" colSpan={2}>EXPLAINER</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            <TableRow>
-              <TableCell align="center">
-                <div style={{ justifyContent: 'center' }}>
-                  <StopIcon style={{ color: green[500] }}></StopIcon>
-                </div>
-              </TableCell>
-              <TableCell align="center">
-                <div style={{ justifyContent: 'center' }}>
-                  <p>Bull Market</p>
-                </div>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell align="center">
-                <div style={{ justifyContent: 'center' }}>
-                  <StopIcon style={{ color: yellow[500] }}></StopIcon>
-                </div>
-              </TableCell>
-              <TableCell align="center">
-                <div style={{ justifyContent: 'center' }}>
-                  <p>Neutral</p>
-                </div>
-              </TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell align="center">
-                <div style={{ justifyContent: 'center' }}>
-                  <StopIcon style={{ color: red[500] }}></StopIcon>
-                </div>
-              </TableCell>
-              <TableCell align="center">
-                <div style={{ justifyContent: 'center' }}>
-                  <p>Bear Market</p>
-                </div>
-              </TableCell>
-            </TableRow>
-          </TableBody>
-        </Table>
-        <Avatar className={classes.avatar}>
-          <MdSyncProblem />
-        </Avatar>
-        <Typography variant="h5">
-          Probability Heat Map Analysis Version2
-        </Typography>
-        <img src={MarketRisk} width="60%" />
+        <Grid container justify="flex-start" alignItems="center">
+          <Grid item xs={7}>
+            <Line
+              data={{
+                labels: allocationDataset.map(({ Dates }) => {
+                  const momentString = moment(Dates, "DD/MM/YYYY");
+                  if (interval >= 30) {
+                    return momentString.format("YYYY-MM");
+                  } else {
+                    return momentString.format("YYYY-MM-DD");
+                  }
+                }),
+                datasets: [
+                  {
+                    data: allocationDataset.map(
+                      (data) => data.Total_Allocation
+                    ),
+                    label: "Allocation Ratio",
+                    borderColor: "#01579B",
+                    backgroundColor: "rgb(129, 212, 250, 0.5)",
+                    fill: true,
+                  },
+                  {
+                    data: allocationWeightDataset.map(
+                      (data) => data["US_S&P_500"]
+                    ),
+                    label: "US S&P 500",
+                    borderColor: "#0B1D78",
+                    backgroundColor: "transparent",
+                    fill: false,
+                    hidden: true,
+                  },
+                  {
+                    data: allocationWeightDataset.map(
+                      (data) => data["US_Nasdaq_100"]
+                    ),
+                    label: "US Nasdaq 100",
+                    borderColor: "#0045A5",
+                    backgroundColor: "transparent",
+                    fill: false,
+                    hidden: true,
+                  },
+                  {
+                    data: allocationWeightDataset.map(
+                      (data) => data["EU_Euro_Stoxx_50"]
+                    ),
+                    label: "EU Euro Stoxx 50",
+                    borderColor: "#0069C0",
+                    backgroundColor: "transparent",
+                    fill: false,
+                    hidden: true,
+                  },
+                  {
+                    data: allocationWeightDataset.map(
+                      (data) => data["UK_FTSE_100"]
+                    ),
+                    label: "UK FTSE 100",
+                    borderColor: "#008AC5",
+                    backgroundColor: "transparent",
+                    fill: false,
+                    hidden: true,
+                  },
+                  {
+                    data: allocationWeightDataset.map(
+                      (data) => data["Japan_Nikkei_225"]
+                    ),
+                    label: "Japan Nikkei 225",
+                    borderColor: "#00A9B5",
+                    backgroundColor: "transparent",
+                    fill: false,
+                    hidden: true,
+                  },
+                  {
+                    data: allocationWeightDataset.map(
+                      (data) => data["MSCI_EM_USD"]
+                    ),
+                    label: "MSCI EM USD",
+                    borderColor: "#1FE074",
+                    backgroundColor: "transparent",
+                    fill: false,
+                    hidden: true,
+                  },
+                ],
+              }}
+              options={{
+                title: {
+                  display: false,
+                  text: "Custom Chart Title",
+                },
+                tooltips: {
+                  mode: "index",
+                  intersect: false,
+                },
+                hover: {
+                  mode: "nearest",
+                  intersect: true,
+                },
+                legend: {
+                  labels: {
+                    fontSize: 12,
+                    fontStyle: "bold",
+                  },
+                },
+              }}
+            />
+          </Grid>
+          <Grid item xs={5} align="center">
+          <img src={MarketRisk} width="80%" />
+          </Grid>
+        </Grid>
+
       </Paper>
     </Container>
   );

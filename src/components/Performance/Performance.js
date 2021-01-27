@@ -9,17 +9,12 @@ import moment from "moment";
 const Performance = () => {
   const classes = usestyles();
 
-  const dataset = pnlData.filter(
-    (data, index) => index % 30 === 0
-  );
+  const dataset = pnlData.filter((data, index) => index % 60 === 0);
 
   return (
     <Container component="main" maxWidth="lg">
       <Paper className={classes.paper} elevation={3}>
-        <Avatar className={classes.avatar}>
-          <RiMoneyEuroCircleLine />
-        </Avatar>
-        <Typography variant="h5">Pnl result</Typography>
+        <Typography variant="h5">Current Market Analysis</Typography>
         <Line
           data={{
             labels: dataset.map(({ Dates }) => {
@@ -31,7 +26,9 @@ const Performance = () => {
             }),
             datasets: [
               {
-                data: dataset.map((data) => String(Number((data.Pnl - 1) * 100).toFixed(2))),
+                data: dataset.map((data) =>
+                  String(Number((data.Pnl - 1)).toFixed(2))
+                ),
                 label: "Profit and Lost",
                 borderColor: "red",
                 backgroundColor: "rgba(255, 0, 0, 0.5)",
@@ -48,6 +45,23 @@ const Performance = () => {
               mode: "index",
               intersect: false,
             },
+            scales: {
+                yAxes: [
+                  {
+                    ticks: {
+                      min: 0,
+                      max: 1.2, // Your absolute max value
+                      callback: function (value) {
+                        return ((value) * 100).toFixed(2) + "%"; // convert it to percentage
+                      },
+                    },
+                    scaleLabel: {
+                      display: false,
+                      labelString: "Percentage",
+                    },
+                  },
+                ],
+              },
             hover: {
               mode: "nearest",
               intersect: true,

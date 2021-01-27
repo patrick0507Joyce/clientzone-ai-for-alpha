@@ -55,10 +55,7 @@ const Explain = () => {
   return (
     <Container component="main" maxWidth="lg">
       <Paper className={classes.paper} elevation={3}>
-        <Avatar className={classes.avatar}>
-          <GoBook />
-        </Avatar>
-        <Typography variant="h5">Global Allocation</Typography>
+        <Typography variant="h5">Market Indicators</Typography>
         <Grid container justify="flex-start" alignItems="center">
           <Grid item xs={1}>
             <Typography variant="h6">Market: </Typography>
