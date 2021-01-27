@@ -18,4 +18,7 @@ export default makeStyles((theme) => ({
     margin: theme.spacing(1),
     backgroundColor: "red",
   },
+  table: {
+    padding: "2rem"
+  }
 }));

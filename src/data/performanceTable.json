@@ -1,0 +1,32 @@
+[
+    {
+        "year":"ITD",
+        "Annualized Return":"21.13",
+        "Annualized Volability":"9.25",
+        "Sharpe":"2.29",
+        "Sortino":"2.94",
+        "Drawdown":"-8.71",
+        "Turnover":"1.73",
+        "Equity Correlation":"0.35"
+    },
+    {
+        "year":"1Y",
+        "Annualized Return":"51.41",
+        "Annualized Volability":"12.82",
+        "Sharpe":"4.01",
+        "Sortino":"5.63",
+        "Drawdown":"-6.54",
+        "Turnover":"2.95",
+        "Equity Correlation":"0.29"
+    },
+    {
+        "year":"3Y",
+        "Annualized Return":"20.80",
+        "Annualized Volability":"10.11",
+        "Sharpe":"2.06",
+        "Sortino":"2.63",
+        "Drawdown":"-8.71",
+        "Turnover":"1.72",
+        "Equity Correlation":"0.32"
+    }
+]
