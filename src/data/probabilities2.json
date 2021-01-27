@@ -1,37 +1,37 @@
 [
   {
     "Asset": "US S&P 500",
-    "Current_Allocation": "11.17",
+    "Current_Allocation": "16",
     "Market Risk": ""
   },
   {
     "Asset": "US Nasdaq 100",
-    "Current_Allocation": "13.27",
+    "Current_Allocation": "17",
     "Market Risk": ""
   },
   {
     "Asset": "EU Euro Stoxx 50",
-    "Current_Allocation": "47.34",
+    "Current_Allocation": "14",
     "Market Risk": ""
   },
   {
     "Asset": "UK FTSE 100",
-    "Current_Allocation": "18.14",
+    "Current_Allocation": "12",
     "Market Risk": ""
   },
   {
     "Asset": "Japan Nikkei 225",
-    "Current_Allocation": "2.58",
+    "Current_Allocation": "27",
     "Market Risk": ""
   },
   {
     "Asset": "MSCI EM USD",
-    "Current_Allocation": "4.53",
+    "Current_Allocation": "14",
     "Market Risk": ""
   },
   {
     "Asset": "Global Allocation",
-    "Current_Allocation": "22.17",
+    "Current_Allocation": "100",
     "Market Risk": ""
   }
 ]

@@ -256,8 +256,7 @@ const Allocation = () => {
                     (Number(data.Current_Allocation) > 10 ?
                     <StopIcon style={{ color: green[500] }}></StopIcon> :
                     <div>
-                      <StopIcon style={{ color: red[500] }}></StopIcon>
-                      <StopIcon style={{ color: red[500] }}></StopIcon>
+                      <StopIcon style={{ color: green[500] }}></StopIcon>
                     </div>
                     )
                   }
