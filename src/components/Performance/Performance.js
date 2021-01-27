@@ -15,7 +15,7 @@ const Performance = () => {
   return (
     <Container component="main" maxWidth="lg">
       <Paper className={classes.paper} elevation={2}>
-        <Typography variant="h5">Current Market Analysis</Typography>
+        <Typography variant="h5">Performance</Typography>
         <Grid container justify="center" alignItems="center">
           <Grid item xs={6} align="center">
             <Typography variant="h6">Historical Performance</Typography>
