@@ -240,7 +240,7 @@ const Allocation = () => {
             />
           </Grid>
           <Grid item xs={5} align="center">
-          <img src={MarketRisk} width="80%" />
+          <img src={MarketRisk} width="100%" />
           </Grid>
         </Grid>
 
