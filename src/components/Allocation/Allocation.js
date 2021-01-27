@@ -250,7 +250,7 @@ const Allocation = () => {
               {ProbabilityHeatMap.map((data, index) => (
                 <TableRow key={index}>
                   <TableCell>{data.Asset}</TableCell>
-                  <TableCell>{data.Current_Allocation}</TableCell>
+                  <TableCell>{data.Current_Allocation + '%'}</TableCell>
                   <TableCell>
                   {
                     (Number(data.Current_Allocation) > 10 ?
@@ -270,7 +270,7 @@ const Allocation = () => {
           <MdSyncProblem />
         </Avatar>
         <Typography variant="h5">Probability Heat Map Analysis Version2</Typography>
-        <img src={MarketRisk} width="100%"/>
+        <img src={MarketRisk} width="60%"/>
       </Paper>
     </Container>
   );

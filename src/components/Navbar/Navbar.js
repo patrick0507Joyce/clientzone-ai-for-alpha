@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useHistory, useLocation } from "react-router-dom";
-import { AppBar, Typography, Toolbar, Button, Avatar } from "@material-ui/core";
+import { AppBar, Typography, Toolbar, Button, Avatar, Paper } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import useStyles from "./styles";
 import logo from "../../images/logo_ai_for_alpha.svg";
@@ -25,12 +25,17 @@ const Navbar = () => {
 
   useEffect(tokenHook, [location]);
 
-  const preventDefault = (event) => event.preventDefault();
 
   return (
     <AppBar className={classes.appBar} position="static" color="inherit">
       <div className={classes.brandContainer}>
-        <img className={classes.image} src={logo} alt="icon" height="60" />
+        <Paper 
+        variant="elevation"
+        component={Link}
+        to="/allocation"
+        >
+          <img className={classes.image} src={logo} alt="icon" height="60" />
+        </Paper>
       </div>
       <Toolbar className={classes.navbar}>
         <div>
@@ -59,7 +64,7 @@ const Navbar = () => {
             color="secondary"
             variant="outlined"
           >
-            Explain
+            Explicability
           </Button>
         </div>
       </Toolbar>
