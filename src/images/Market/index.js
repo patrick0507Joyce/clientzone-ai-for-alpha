@@ -4,7 +4,7 @@ import MSCIEMUSD from "./shap/explicability_2021-01-26/avg_best10_shap_contrib_M
 import UKFTSE100 from "./shap/explicability_2021-01-26/avg_best10_shap_contrib_UK FTSE 100_2021-01-26.png";
 import USNasdaq100 from "./shap/explicability_2021-01-26/avg_best10_shap_contrib_US Nasdaq 100_2021-01-26.png";
 import USSP500 from "./shap/explicability_2021-01-26/avg_best10_shap_contrib_US S&P 500_2021-01-26.png";
-import MarketRisk from "./market-risk.jpeg";
+import MarketRisk from "./market-risk.png";
 
 export {
   EUEuroStoxx,

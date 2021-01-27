@@ -86,7 +86,7 @@ const Allocation = () => {
   return (
     <Container component="main" maxWidth="lg">
       <Paper className={classes.paper} elevation={3}>
-        <Typography variant="h5">Allocation</Typography>
+        <Typography variant="h5">Global Allocation</Typography>
         <Grid container justify="center" alignItems="center">
           <Grid item xs={7} align="center">
             <Typography variant="h6">Historical Allocation</Typography>
@@ -96,10 +96,12 @@ const Allocation = () => {
           </Grid>
         </Grid>
         <Grid container justify="flex-start" alignItems="center">
+          <Grid item xs={12}>
+          <Grid container justify="flex-start" alignItems="center">
           <Grid item xs={false}>
             <Typography variant="h6">Duration: </Typography>
           </Grid>
-          <Grid item xs={5} sm={4}>
+          <Grid item sm={4}>
             <Toolbar className={classes.navbar}>
               <div>
                 <Button
@@ -133,16 +135,18 @@ const Allocation = () => {
             </Toolbar>
           </Grid>
         </Grid>
-        <Grid container justify="flex-start" alignItems="center">
+          </Grid>
+        </Grid>
+        <Grid container justify="flex-start" alignItems="flex-start">
           <Grid item xs={7}>
             <Line
               data={{
                 labels: allocationDataset.map(({ Dates }) => {
                   const momentString = moment(Dates, "DD/MM/YYYY");
                   if (interval >= 30) {
-                    return momentString.format("YYYY-MM");
+                    return momentString.format("MMM-YYYY");
                   } else {
-                    return momentString.format("YYYY-MM-DD");
+                    return momentString.format("DDD-MMM-YYYY");
                   }
                 }),
                 datasets: [
@@ -150,10 +154,10 @@ const Allocation = () => {
                     data: allocationDataset.map(
                       (data) => data.Total_Allocation
                     ),
-                    label: "Allocation Ratio",
+                    label: "Global Allocation",
                     borderColor: "#01579B",
                     backgroundColor: "rgb(129, 212, 250, 0.5)",
-                    fill: true,
+                    fill: false,
                   },
                   {
                     data: allocationWeightDataset.map(
@@ -232,18 +236,46 @@ const Allocation = () => {
                 },
                 legend: {
                   labels: {
-                    fontSize: 12,
+                    fontSize: 15,
                     fontStyle: "bold",
+                  },
+                },
+                scales: {
+                  xAxes: [
+                    {
+                      gridLines: {
+                        display: false,
+                      },
+                    },
+                  ],
+                  yAxes: [
+                    {
+                      ticks: {
+                        min: -1,
+                        max: 1.2, // Your absolute max value
+                        callback: function (value) {
+                          return (value * 100).toFixed(1) + "%"; // convert it to percentage
+                        },
+                      },
+                      scaleLabel: {
+                        display: false,
+                        labelString: "Percentage",
+                      },
+                    },
+                  ],
+                },
+                elements: {
+                  point: {
+                    radius: 0,
                   },
                 },
               }}
             />
           </Grid>
           <Grid item xs={5} align="center">
-          <img src={MarketRisk} width="100%" />
+            <img src={MarketRisk} width="100%" />
           </Grid>
         </Grid>
-
       </Paper>
     </Container>
   );

@@ -11,8 +11,8 @@ const PerformanceTable = () => {
               <TableCell align="center"></TableCell>
               <TableCell align="center">Annualized Return</TableCell>
               <TableCell align="center">Annualized Volability</TableCell>
-              {/*<TableCell align="center">Sharpe</TableCell> */}
-              {/*<TableCell align="center">Sortino</TableCell> */}
+              <TableCell align="center">Sharpe</TableCell> 
+              <TableCell align="center">Sortino</TableCell>
               <TableCell align="center">Drawdown</TableCell>
               <TableCell align="center">Turnover</TableCell>
               <TableCell align="center">Equity Correlation</TableCell>
@@ -24,8 +24,8 @@ const PerformanceTable = () => {
                 <TableCell align="center">{data["year"]}</TableCell>
                 <TableCell align="center">{data["Annualized Return"]+ "%"}</TableCell>
                 <TableCell align="center">{data["Annualized Volability"]+ "%"}</TableCell>
-                {/*<TableCell align="center">{data["Sharpe"]+ "%"}</TableCell> */}
-                {/*<TableCell align="center">{data["Sortino"]+ "%"}</TableCell> */}
+                <TableCell align="center">{data["Sharpe"]+ "%"}</TableCell>
+                <TableCell align="center">{data["Sortino"]+ "%"}</TableCell>
                 <TableCell align="center">{data["Drawdown"]+ "%"}</TableCell>
                 <TableCell align="center">{data["Turnover"]+ "%"}</TableCell>
                 <TableCell align="center">{data["Equity Correlation"]+ "%"}</TableCell>

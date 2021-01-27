@@ -20,5 +20,9 @@ export default makeStyles((theme) => ({
   },
   table: {
     padding: "2rem"
+  },
+  title: {
+    marginTop: "1rem",
+    marginBottom: "1rem",
   }
 }));

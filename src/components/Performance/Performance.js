@@ -1,7 +1,6 @@
 import React from "react";
 import usestyles from "./styles";
 import { Container, Paper, Avatar, Typography, Grid } from "@material-ui/core";
-import { RiMoneyEuroCircleLine } from "react-icons/ri";
 import pnlData from "../../data/total_pnl.json";
 import { Line } from "react-chartjs-2";
 import moment from "moment";
@@ -10,26 +9,24 @@ import PerformanceTable from "./PerformanceTable";
 const Performance = () => {
   const classes = usestyles();
 
-  const dataset = pnlData.filter((data, index) => index % 60 === 0);
+  const dataset = pnlData.filter((data, index) => index % 1 === 0);
 
   return (
     <Container component="main" maxWidth="lg">
       <Paper className={classes.paper} elevation={2}>
-        <Typography variant="h5">Performance</Typography>
         <Grid container justify="center" alignItems="center">
-          <Grid item xs={6} align="center">
-            <Typography variant="h6">Historical Performance</Typography>
+          <Grid item xs={12} align="center">
+            <Typography variant="h6" className={classes.title}>
+              Historical Performance
+            </Typography>
           </Grid>
-          <Grid item xs={6} align="center">
-            <Typography variant="h6">Performance Indicators</Typography>
-          </Grid>
-          <Grid item xs={6} align="center">
+          <Grid item xs={7} align="center">
             <Line
               data={{
-                labels: dataset.map(({ Dates }) => {
-                  const momentString = moment(Dates, "DD-MM-YYYY")
-                    .format("YYYY-MM")
-                    .toLocaleLowerCase();
+                labels: dataset.map((data) => {
+                  const momentString = moment(data["Dates"], "DD-MM-YYYY")
+                    .format("MMM-YYYY")
+                    .toString();
 
                   return momentString;
                 }),
@@ -40,8 +37,7 @@ const Performance = () => {
                     ),
                     label: "Profit and Lost",
                     borderColor: "red",
-                    backgroundColor: "rgba(255, 0, 0, 0.5)",
-                    fill: true,
+                    fill: false,
                   },
                 ],
               }}
@@ -70,16 +66,33 @@ const Performance = () => {
                       },
                     },
                   ],
+                  xAxes: [
+                    {
+                      gridLines: {
+                        display: false,
+                      },
+                    },
+                  ],
                 },
                 hover: {
                   mode: "nearest",
                   intersect: true,
                 },
+                elements: {
+                  point: {
+                    radius: 0,
+                  },
+                },
               }}
             />
           </Grid>
           <Grid item xs={6} align="center">
-            <PerformanceTable/>
+            <Typography variant="h6" className={classes.title}>
+              Performance Indicators
+            </Typography>
+          </Grid>
+          <Grid item xs={7} align="center">
+            <PerformanceTable />
           </Grid>
         </Grid>
       </Paper>
