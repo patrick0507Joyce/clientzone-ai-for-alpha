@@ -29,7 +29,7 @@ export default makeStyles((theme) => ({
     width: '50rem',
   },
   image: {
-    marginRight: '4rem',
+    marginRight: '10rem',
   }
 }));
 

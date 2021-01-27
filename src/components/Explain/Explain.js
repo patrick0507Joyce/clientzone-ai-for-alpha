@@ -125,7 +125,7 @@ const Explain = () => {
             </Toolbar>
           </Grid>
         </Grid>
-        <img src={imageSrc} class={classes.image}/>
+        <img src={imageSrc} class={classes.image} width="60%"/>
       </Paper>
     </Container>
   );
