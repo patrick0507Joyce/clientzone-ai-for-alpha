@@ -10,18 +10,17 @@ import {
   Grid,
 } from "@material-ui/core";
 import { IoBarChartSharp } from "react-icons/io5";
-import { MdSyncProblem } from 'react-icons/md';
-import StopIcon from '@material-ui/icons/Stop';
+import { MdSyncProblem } from "react-icons/md";
+import StopIcon from "@material-ui/icons/Stop";
 import allocationResultData from "../../data/total_allocation.json";
 import allocationWeightData from "../../data/strategies_weight.json";
 import { Line } from "react-chartjs-2";
 import moment from "moment";
 import { Table, TableHead, TableRow, TableBody } from "@material-ui/core";
-import ProbabilityHeatMap from '../../data/probabilities2.json';
+import ProbabilityHeatMap from "../../data/probabilities2.json";
 import { TableCell } from "@material-ui/core";
-import { green, red } from '@material-ui/core/colors';
-import { MarketRisk } from '../../images/Market'
-
+import { green, red, yellow } from "@material-ui/core/colors";
+import { MarketRisk } from "../../images/Market";
 
 const Allocation = () => {
   const classes = usestyles();
@@ -233,43 +232,83 @@ const Allocation = () => {
         </Avatar>
         <Typography variant="h5">Probability Heat Map Analysis</Typography>
         <Table className={classes.table}>
-            <TableHead>
-              <TableRow>
-                <TableCell>
-                  Asset
-                </TableCell>
-                <TableCell>
-                  Current Allocation
-                </TableCell>
-                <TableCell>
-                  Market Risk
-                </TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {ProbabilityHeatMap.map((data, index) => (
-                <TableRow key={index}>
-                  <TableCell>{data.Asset}</TableCell>
-                  <TableCell>{data.Current_Allocation + '%'}</TableCell>
-                  <TableCell>
-                  {
-                    (Number(data.Current_Allocation) > 10 ?
-                    <StopIcon style={{ color: green[500] }}></StopIcon> :
+          <TableHead align="center">
+            <TableRow>
+              <TableCell align="center">Asset</TableCell>
+              <TableCell align="center">Current Allocation</TableCell>
+              <TableCell align="center">Market Risk</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            {ProbabilityHeatMap.map((data, index) => (
+              <TableRow key={index}>
+                <TableCell align="center">{data.Asset}</TableCell>
+                <TableCell align="center">{data.Current_Allocation + "%"}</TableCell>
+                <TableCell align="center">
+                  {Number(data.Current_Allocation) > 10 ? (
+                    <StopIcon style={{ color: green[500] }}></StopIcon>
+                  ) : (
                     <div>
                       <StopIcon style={{ color: green[500] }}></StopIcon>
                     </div>
-                    )
-                  }
-                  </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
+                  )}
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+        <Table className={classes.tableLegend}>
+          <TableHead>
+            <TableRow>
+              <TableCell align="center" colSpan={2}>EXPLAINER</TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>
+            <TableRow>
+              <TableCell align="center">
+                <div style={{ justifyContent: 'center' }}>
+                  <StopIcon style={{ color: green[500] }}></StopIcon>
+                </div>
+              </TableCell>
+              <TableCell align="center">
+                <div style={{ justifyContent: 'center' }}>
+                  <p>Bull Market</p>
+                </div>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell align="center">
+                <div style={{ justifyContent: 'center' }}>
+                  <StopIcon style={{ color: yellow[500] }}></StopIcon>
+                </div>
+              </TableCell>
+              <TableCell align="center">
+                <div style={{ justifyContent: 'center' }}>
+                  <p>Neutral</p>
+                </div>
+              </TableCell>
+            </TableRow>
+            <TableRow>
+              <TableCell align="center">
+                <div style={{ justifyContent: 'center' }}>
+                  <StopIcon style={{ color: red[500] }}></StopIcon>
+                </div>
+              </TableCell>
+              <TableCell align="center">
+                <div style={{ justifyContent: 'center' }}>
+                  <p>Bear Market</p>
+                </div>
+              </TableCell>
+            </TableRow>
+          </TableBody>
         </Table>
         <Avatar className={classes.avatar}>
           <MdSyncProblem />
         </Avatar>
-        <Typography variant="h5">Probability Heat Map Analysis Version2</Typography>
-        <img src={MarketRisk} width="60%"/>
+        <Typography variant="h5">
+          Probability Heat Map Analysis Version2
+        </Typography>
+        <img src={MarketRisk} width="60%" />
       </Paper>
     </Container>
   );

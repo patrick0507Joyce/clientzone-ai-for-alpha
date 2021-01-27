@@ -31,6 +31,9 @@ export default makeStyles((theme) => ({
   table: {
     minWidth: 650,
   },
+  tableLegend: {
+    maxWidth: 200,
+  },
   upCube: {
     color: 'green[500]',
   },
