@@ -16,7 +16,7 @@ const Performance = () => {
       <Paper className={classes.paper} elevation={2}>
         <Grid container justify="center" alignItems="center">
           <Grid item xs={12} align="center">
-            <Typography variant="h6" className={classes.title}>
+            <Typography variant="h6" className={classes.subtitle}>
               Historical Performance
             </Typography>
           </Grid>

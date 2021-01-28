@@ -21,8 +21,9 @@ export default makeStyles((theme) => ({
   table: {
     padding: "2rem"
   },
-  title: {
+  subtitle: {
     marginTop: "1rem",
     marginBottom: "1rem",
+    color: 'rgba(72, 133, 210, 1)',
   }
 }));

@@ -39,6 +39,9 @@ export default makeStyles((theme) => ({
   },
   downCube: {
     color: 'red[700]',
+  },
+  subtitle: {
+    color: 'rgba(72, 133, 210, 1)'
   }
 }));
 

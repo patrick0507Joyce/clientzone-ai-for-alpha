@@ -93,9 +93,9 @@ const Allocation = () => {
         <Typography variant="h5">Global Allocation</Typography>
         <Grid container justify="center" alignItems="center">
           <Grid item xs={7} align="center">
-            <Typography variant="h6">Historical Allocation</Typography>
+            <Typography variant="h6" className={classes.subtitle}>Historical Allocation</Typography>
           </Grid>
-          <Grid item xs={5} align="center">
+          <Grid item xs={5} align="center"className={classes.subtitle}>
             <Typography variant="h6">Current Market Analysis</Typography>
           </Grid>
         </Grid>
