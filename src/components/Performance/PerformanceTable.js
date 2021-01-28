@@ -23,12 +23,12 @@ const PerformanceTable = () => {
               <TableRow key={index}>
                 <TableCell align="center">{data["year"]}</TableCell>
                 <TableCell align="center">{data["Annualized Return"]+ "%"}</TableCell>
-                <TableCell align="center">{data["Annualized Volability"]+ "%"}</TableCell>
-                <TableCell align="center">{data["Sharpe"]+ "%"}</TableCell>
-                <TableCell align="center">{data["Sortino"]+ "%"}</TableCell>
+                <TableCell align="center">{data["Annualized Volatility"]+ "%"}</TableCell>
+                <TableCell align="center">{data["Sharpe"]}</TableCell>
+                <TableCell align="center">{data["Sortino"]}</TableCell>
                 <TableCell align="center">{data["Drawdown"]+ "%"}</TableCell>
-                <TableCell align="center">{data["Turnover"]+ "%"}</TableCell>
-                <TableCell align="center">{data["Equity Correlation"]+ "%"}</TableCell>
+                <TableCell align="center">{data["Turnover"]}</TableCell>
+                <TableCell align="center">{data["Equity Correlation"]}</TableCell>
               </TableRow>
             ))}
           </TableBody>

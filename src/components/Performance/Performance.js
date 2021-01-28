@@ -91,7 +91,7 @@ const Performance = () => {
               Performance Indicators
             </Typography>
           </Grid>
-          <Grid item xs={7} align="center">
+          <Grid item xs={8} align="center">
             <PerformanceTable />
           </Grid>
         </Grid>

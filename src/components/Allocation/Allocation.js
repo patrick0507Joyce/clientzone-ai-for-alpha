@@ -256,7 +256,7 @@ const Allocation = () => {
                     {
                       ticks: {
                         min: -1,
-                        max: 1.2, // Your absolute max value
+                        max: 1, // Your absolute max value
                         callback: function (value) {
                           return (value * 100).toFixed(1) + "%"; // convert it to percentage
                         },
@@ -277,7 +277,7 @@ const Allocation = () => {
             />
           </Grid>
           <Grid item xs={5} align="center">
-            <img src={MarketRisk} width="100%" />
+            <img src={MarketRisk} width="80%" />
           </Grid>
         </Grid>
       </Paper>
