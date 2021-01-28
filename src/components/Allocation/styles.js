@@ -9,6 +9,15 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     padding: theme.spacing(1),
   },
+  specialPaper: {
+    margin: theme.spacing(1),
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    padding: theme.spacing(1),
+    height: '20rem'
+
+  },
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
@@ -42,6 +51,12 @@ export default makeStyles((theme) => ({
   },
   subtitle: {
     color: 'rgba(72, 133, 210, 1)'
+  },
+  gridLayout: {
+    height: "100%"
+  },
+  gridContainer: {
+    minHeight: "100%"
   }
 }));
 

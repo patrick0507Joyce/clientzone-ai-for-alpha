@@ -88,7 +88,7 @@ const Allocation = () => {
         </Paper>
       </Container>
       <Container maxWidth="lg">
-        <Grid container justify="center" alignItems="center">
+        <Grid container justify="center">
           <Grid item xs={6} align="center">
             <Paper className={classes.paper} elevation={3}>
               <Typography variant="h6" className={classes.subtitle}>
@@ -108,9 +108,9 @@ const Allocation = () => {
       </Container>
 
       <Container maxWidth="2xl">
-        <Grid container justify="center" justify="flex-start">
-          <Grid item xs={6} align="center" justify="flex-start">
-            <Paper className={classes.paper} elevation={3}>
+        <Grid container className={classes.gridContainer}>
+          <Grid item xs={6} align="center" className={classes.gridLayout}>
+            <Paper className={classes.specialPaper} elevation={3}>
               <Toolbar className={classes.navbar}>
                 <div>
                   <Button
@@ -149,9 +149,9 @@ const Allocation = () => {
               />
             </Paper>
           </Grid>
-          <Grid item xs={6} align="center" justify="flex-start">
-            <Paper className={classes.paper} elevation={3}>
-              <img src={MarketRisk} width="69%" />
+          <Grid item xs={6} align="center" className={classes.gridLayout}>
+            <Paper className={classes.specialPaper} elevation={3}>
+              <img src={MarketRisk} height="100%" />
             </Paper>
           </Grid>
         </Grid>
@@ -161,3 +161,5 @@ const Allocation = () => {
 };
 
 export default Allocation;
+
+
