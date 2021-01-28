@@ -28,13 +28,14 @@ const Allocation = () => {
     moment().subtract(4, "years").format("YYYY-MM-DD")
   );
   const [endDate, setEndDate] = useState(moment().format("YYYY-MM-DD"));
-  const [interval, setInterval] = useState(30);
+  const [interval, setInterval] = useState(1);
   const [allocationDataset, setAllocationDataset] = useState(
     allocationResultData
   );
   const [allocationWeightDataset, setAllocationWeightDataset] = useState(
     allocationWeightData
   );
+  const [monthAndYearExpression, setMonthAndYearExpression] = useState(true);
 
   const datasetHook = () => {
     setAllocationDataset(
@@ -66,16 +67,19 @@ const Allocation = () => {
     switch (duration) {
       case "three-years":
         setStartDate(moment().subtract(3, "years").format("YYYY-MM-DD"));
-        setInterval(30);
+        setInterval(1);
+        setMonthAndYearExpression(true);
         break;
       case "one-year":
         setStartDate(moment().subtract(1, "years").format("YYYY-MM-DD"));
-        setInterval(7);
+        setInterval(1);
+        setMonthAndYearExpression(true);
         break;
 
       case "one-month":
         setStartDate(moment().subtract(1, "months").format("YYYY-MM-DD"));
         setInterval(1);
+        setMonthAndYearExpression(false);
         break;
 
       default:
@@ -143,10 +147,10 @@ const Allocation = () => {
               data={{
                 labels: allocationDataset.map(({ Dates }) => {
                   const momentString = moment(Dates, "DD/MM/YYYY");
-                  if (interval >= 30) {
+                  if (monthAndYearExpression) {
                     return momentString.format("MMM-YYYY");
                   } else {
-                    return momentString.format("DDD-MMM-YYYY");
+                    return momentString.format("DD-MMM-YYYY");
                   }
                 }),
                 datasets: [
