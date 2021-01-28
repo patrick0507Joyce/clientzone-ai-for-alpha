@@ -57,9 +57,6 @@ const Explain = () => {
       <Paper className={classes.paper} elevation={3}>
         <Typography variant="h5">Market Indicators</Typography>
         <Grid container justify="flex-start" alignItems="center">
-          <Grid item xs={1}>
-            <Typography variant="h6">Market: </Typography>
-          </Grid>
           <Grid item xs={12} sm={6}>
             <Toolbar className={classes.navbar}>
               <Button

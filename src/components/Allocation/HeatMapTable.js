@@ -1,4 +1,10 @@
 import React from 'react'
+import { Table, TableHead, TableRow, TableBody } from "@material-ui/core";
+import ProbabilityHeatMap from "../../data/probabilities2.json";
+import { TableCell } from "@material-ui/core";
+import { green, red, yellow } from "@material-ui/core/colors";
+import StopIcon from "@material-ui/icons/Stop";
+
 
 const HeatMapTable = () => {
     return (
