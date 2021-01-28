@@ -81,7 +81,7 @@ const Allocation = () => {
   };
 
   return (
-    <Container component="main" maxWidth="lg">
+    <Container component="main" maxWidth="2xl">
       <Container maxWidth="sm">
         <Paper className={classes.paper} elevation={3}>
           <Typography variant="h5">Global Allocation</Typography>
@@ -151,7 +151,7 @@ const Allocation = () => {
           </Grid>
           <Grid item xs={6} align="center" justify="flex-start">
             <Paper className={classes.paper} elevation={3}>
-              <img src={MarketRisk} width="70%" />
+              <img src={MarketRisk} width="65%" />
             </Paper>
           </Grid>
         </Grid>

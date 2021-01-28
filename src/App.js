@@ -14,7 +14,7 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <Container maxWidth="lg">
+      <Container maxWidth="2xl">
       <Navbar />
       <Switch>
         <Route path="/" exact component={Performance} />

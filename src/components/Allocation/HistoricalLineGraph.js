@@ -101,7 +101,7 @@ const HistoricalLineGraph = ({allocationDataset, allocationWeightDataset, monthA
                 },
                 legend: {
                   labels: {
-                    fontSize: 10,
+                    fontSize: 17,
                     fontStyle: "bold",
                   },
                 },
