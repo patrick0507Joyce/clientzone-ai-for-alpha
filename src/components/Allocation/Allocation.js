@@ -107,7 +107,7 @@ const Allocation = () => {
         </Grid>
       </Container>
 
-      <Container maxWidth="lg">
+      <Container maxWidth="2xl">
         <Grid container justify="center" justify="flex-start">
           <Grid item xs={6} align="center" justify="flex-start">
             <Paper className={classes.paper} elevation={3}>
@@ -151,7 +151,7 @@ const Allocation = () => {
           </Grid>
           <Grid item xs={6} align="center" justify="flex-start">
             <Paper className={classes.paper} elevation={3}>
-              <img src={MarketRisk} width="90%" />
+              <img src={MarketRisk} width="70%" />
             </Paper>
           </Grid>
         </Grid>
