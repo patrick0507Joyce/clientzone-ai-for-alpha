@@ -35,7 +35,7 @@ const Performance = () => {
                     data: dataset.map((data) =>
                       String(Number(data.Pnl - 1).toFixed(2))
                     ),
-                    label: "Profit and Lost",
+                    label: "Profit and Loss",
                     borderColor: "red",
                     fill: false,
                   },
