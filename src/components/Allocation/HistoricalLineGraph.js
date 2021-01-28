@@ -2,7 +2,7 @@ import React from 'react'
 import { Line } from "react-chartjs-2";
 import moment from "moment";
 
-const LineGraph = ({allocationDataset, allocationWeightDataset, monthAndYearExpression}) => {
+const HistoricalLineGraph = ({allocationDataset, allocationWeightDataset, monthAndYearExpression}) => {
     return (
         <Line
               data={{
@@ -139,4 +139,4 @@ const LineGraph = ({allocationDataset, allocationWeightDataset, monthAndYearExpr
     )
 }
 
-export default LineGraph
+export default HistoricalLineGraph

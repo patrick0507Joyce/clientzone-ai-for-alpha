@@ -3,7 +3,7 @@ import usestyles from "./styles";
 import { Container, Paper, Avatar, Typography, Grid } from "@material-ui/core";
 import pnlData from "../../data/total_pnl.json";
 import PerformanceTable from "./PerformanceTable";
-import LineGraph from "./LineGraph";
+import HistorialLineGraph from "./HistorialLineGraph";
 
 const Performance = () => {
   const classes = usestyles();
@@ -20,7 +20,7 @@ const Performance = () => {
           </Grid>
           <Grid item xs={9} align="center">
             <Paper className={classes.paper} elevation={3}>
-              <LineGraph />
+              <HistorialLineGraph />
             </Paper>
           </Grid>
         </Grid>

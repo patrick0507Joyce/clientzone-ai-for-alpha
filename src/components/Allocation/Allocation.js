@@ -13,7 +13,7 @@ import allocationResultData from "../../data/total_allocation.json";
 import allocationWeightData from "../../data/strategies_weight.json";
 import moment from "moment";
 import { MarketRisk } from "../../images/Market";
-import LineGraph from "./LineGraph";
+import HistoricalLineGraph from "./HistoricalLineGraph";
 
 const Allocation = () => {
   const classes = usestyles();
@@ -89,7 +89,7 @@ const Allocation = () => {
       </Container>
       <Container maxWidth="lg">
         <Grid container justify="center" alignItems="center">
-          <Grid item xs={7} align="center">
+          <Grid item xs={6} align="center">
             <Paper className={classes.paper} elevation={3}>
               <Typography variant="h6" className={classes.subtitle}>
                 Historical Allocation
@@ -97,7 +97,7 @@ const Allocation = () => {
             </Paper>
           </Grid>
 
-          <Grid item xs={5} align="center">
+          <Grid item xs={6} align="center">
             <Paper className={classes.paper} elevation={3}>
               <Typography variant="h6" className={classes.subtitle}>
                 Current Market Analysis
@@ -109,7 +109,7 @@ const Allocation = () => {
 
       <Container maxWidth="lg">
         <Grid container justify="center" justify="flex-start">
-          <Grid item xs={7} align="center" justify="flex-start">
+          <Grid item xs={6} align="center" justify="flex-start">
             <Paper className={classes.paper} elevation={3}>
               <Toolbar className={classes.navbar}>
                 <div>
@@ -142,16 +142,16 @@ const Allocation = () => {
                   </Button>
                 </div>
               </Toolbar>
-              <LineGraph
+              <HistoricalLineGraph
                 allocationDataset={allocationDataset}
                 allocationWeightDataset={allocationWeightDataset}
                 monthAndYearExpression={monthAndYearExpression}
               />
             </Paper>
           </Grid>
-          <Grid item xs={5} align="center" justify="flex-start">
+          <Grid item xs={6} align="center" justify="flex-start">
             <Paper className={classes.paper} elevation={3}>
-              <img src={MarketRisk} width="80%" />
+              <img src={MarketRisk} width="90%" />
             </Paper>
           </Grid>
         </Grid>
